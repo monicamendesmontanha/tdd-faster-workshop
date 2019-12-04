@@ -18,6 +18,10 @@ module.exports = class CommandLine {
     return this._process.argv[2];
   }
 
+  output(message) {
+    console.log(message);
+  }
+
 };
 
 class NullProcess {

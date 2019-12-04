@@ -2,6 +2,7 @@
 
 const assert = require("./assert.js");
 const CommandLine = require("./commandLine");
+const stdout = require("test-console").stdout;
 
 describe("CommandLine", function() {
 
@@ -12,6 +13,14 @@ describe("CommandLine", function() {
       process.argv = ["node", "filename.js", "my_arg"];
       const cli = CommandLine.create();
       assert.equal(cli.arg(), "my_arg");
+    });
+  });
+
+  it("outputs to console", function() {
+    stdout.inspectSync((output) => {
+      const cli = CommandLine.create();
+      cli.output("my output");
+      assert.deepEqual(output, ["my output\n"]);
     });
   });
 
