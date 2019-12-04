@@ -13,7 +13,12 @@ describe("CommandLine", function() {
       const cli = CommandLine.create();
       assert.equal(cli.arg(), "my_arg");
     });
-	});
+  });
+
+  it("argument is nullable", function() {
+    const cli = CommandLine.createNull("my_arg");
+    assert.equal(cli.arg(), "my_arg");
+  });
 
 });
 
