@@ -10,10 +10,10 @@ describe("Application", function() {
 
 	it("encodes input using ROT-13", function() {
     const cli = CommandLine.createNull("hello");
-    const app = new App(cli);
 
-    const output = app.run();
-    assert.equal(output, "uryyb");
+    const app = new App(cli);
+    app.run();
+    assert.equal(cli.getLastOutput(), "uryyb");
 	});
 
 });

@@ -10,7 +10,8 @@ module.exports = class App {
   }
 
   run() {
-    const input = this._cli.arg();
-    return rot13.transform(input);
+		const input = this._cli.arg();
+		const output = rot13.transform(input);
+		this._cli.output(output);
   }
 };
