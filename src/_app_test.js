@@ -2,11 +2,15 @@
 "use strict";
 
 const assert = require("./assert.js");
+const App = require("./app.js");
 
-describe("Nothing", function() {
+// Mocha
+describe("Application", function() {
 
-	it("runs tests", function() {
-		assert.todo();
+	it("encodes input RPT-13", function() {
+    const app = new App();
+    const output = app.run("hello");
+    assert.equal(output, "uryyb");
 	});
 
 });
