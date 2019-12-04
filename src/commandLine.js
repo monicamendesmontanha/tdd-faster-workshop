@@ -7,6 +7,6 @@ module.exports = class CommandLine {
   }
 
   arg() {
-    return "my_arg";
+    return process.argv[2];
   }
 };
