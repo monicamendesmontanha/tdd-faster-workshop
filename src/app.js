@@ -2,7 +2,7 @@
 
 module.exports = class App {
 
-  run() {
-    return "uryyb";
+  run(input) {
+    return input;
   }
 };

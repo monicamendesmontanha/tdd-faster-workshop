@@ -7,10 +7,10 @@ const App = require("./app.js");
 // Mocha
 describe("Application", function() {
 
-	it("encodes input RPT-13", function() {
+	it("encodes input ROT-13", function() {
     const app = new App();
     const output = app.run("hello");
-    assert.equal(output, "uryyb");
+    assert.equal(output, "hello");
 	});
 
 });
