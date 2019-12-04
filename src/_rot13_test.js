@@ -3,6 +3,13 @@
 const assert = require("./assert");
 const rot13 = require("./rot13");
 
+
+// STRATEGY
+// - empty string
+// - non alphabetos
+// - single a -> m
+// - more characteres
+
 describe("ROT_13", function() {
 
   it("does nothing with empty string", function() {
@@ -17,7 +24,7 @@ describe("ROT_13", function() {
   });
 
   it("rotates letters by 13", function() {
-    const output = rot13.transform("a");
-    assert.equal(output, "a");
+    const output = rot13.transform("hello");
+    assert.equal(output, "uryyb");
   });
 });
